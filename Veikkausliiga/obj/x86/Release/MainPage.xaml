@@ -1,0 +1,167 @@
+﻿<Page
+    x:Class="Veikkausliiga.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Veikkausliiga"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <StackPanel Background="Azure" Height="800" >
+        <RelativePanel HorizontalAlignment="Left" Margin="30,0,0,0" MinWidth="400" >
+            <TextBlock x:ConnectionId='56' Name="TextHeader" Text="Veikkausliigan ottelut" Height="50" FontSize="32" />
+            <TextBlock x:ConnectionId='57' Name="TextHeaderYear" Height="50" FontSize="32" Margin="10,0,0,0" RelativePanel.RightOf="TextHeader"/>
+        </RelativePanel>
+        <StackPanel HorizontalAlignment="Left" Margin="30,0,0,0" MinWidth="400" >
+            <Frame x:ConnectionId='1' Name="MatchFrame"                              FontSize="24">
+                <StackPanel>
+                    <Button x:ConnectionId='2' Name="RefreshMenu"
+                                                       
+                            ToolTipService.ToolTip="Virkistä"
+                            Height="40" 
+                            Width="400" 
+                            Opacity="100" 
+                            Background="LawnGreen"
+                            Margin="0,0,0,10" 
+                            FontWeight="Bold" >
+                    </Button>
+                    <Button x:ConnectionId='3' Name="MatchButton0" 
+                                                        
+                            Height="70"
+                            Width="400"
+                            Opacity="100" 
+                            Background="LawnGreen"
+                            Margin="0,0,0,5">
+                        <StackPanel>
+                            <TextBlock x:ConnectionId='47' Name="MatchDate0" FontSize="12" HorizontalAlignment="Center" />
+                            <TextBlock x:ConnectionId='48' Name="MatchId0" Visibility="Collapsed"  />
+                            <RelativePanel x:ConnectionId='49' Name="Team0relative" HorizontalAlignment="Center" >
+                                <TextBlock x:ConnectionId='53' Name="HeaderHometeam0" RelativePanel.LeftOf="HeaderSlash0" FontWeight="Bold" FontSize="16" />
+                                <TextBlock x:ConnectionId='54' Name="HeaderSlash0" Text=" - " RelativePanel.AlignHorizontalCenterWithPanel="True" FontSize="16" />
+                                <TextBlock x:ConnectionId='55' Name="HeaderAwayteam0" RelativePanel.RightOf="HeaderSlash0" Margin="0,0,0,0" FontWeight="Bold" FontSize="16" />
+                            </RelativePanel>
+                            <RelativePanel HorizontalAlignment="Center">
+                                <TextBlock x:ConnectionId='50' Name="HeaderHomeGoals0" RelativePanel.LeftOf="HeaderSlashGoals0" FontSize="16" />
+                                <TextBlock x:ConnectionId='51' Name="HeaderSlashGoals0" Text=" - " RelativePanel.AlignHorizontalCenterWithPanel="True" FontSize="16" />
+                                <TextBlock x:ConnectionId='52' Name="HeaderAwayteamGoals0" RelativePanel.RightOf="HeaderSlashGoals0" TextAlignment="Left" Margin="10,0,0,0" FontSize="16" />
+                            </RelativePanel>
+                        </StackPanel>
+                    </Button>
+                    <Button x:ConnectionId='4' Name="MatchButton1" 
+                                                        
+                            Height="70" 
+                            Width="400" 
+                            Opacity="100" 
+                            Background="LawnGreen"
+                            Margin="0,0,0,5">
+                        <StackPanel>
+                            <TextBlock x:ConnectionId='38' Name="MatchDate1" FontSize="12" HorizontalAlignment="Center" />
+                            <TextBlock x:ConnectionId='39' Name="MatchId1" Visibility="Collapsed" />
+                            <RelativePanel x:ConnectionId='40' Name="Team1relative" HorizontalAlignment="Center" >
+                                <TextBlock x:ConnectionId='44' Name="HeaderHometeam1" RelativePanel.LeftOf="HeaderSlash1" FontWeight="Bold" />
+                                <TextBlock x:ConnectionId='45' Name="HeaderSlash1" Text=" - " RelativePanel.AlignHorizontalCenterWithPanel="True" />
+                                <TextBlock x:ConnectionId='46' Name="HeaderAwayteam1" RelativePanel.RightOf="HeaderSlash1" Margin="5,0,0,0" FontWeight="Bold" />
+                            </RelativePanel>
+                            <RelativePanel HorizontalAlignment="Center">
+                                <TextBlock x:ConnectionId='41' Name="HeaderHomeGoals1" RelativePanel.LeftOf="HeaderSlashGoals1" />
+                                <TextBlock x:ConnectionId='42' Name="HeaderSlashGoals1" Text=" - " RelativePanel.AlignHorizontalCenterWithPanel="True" />
+                                <TextBlock x:ConnectionId='43' Name="HeaderAwayteamGoals1" RelativePanel.RightOf="HeaderSlashGoals1" TextAlignment="Left" Margin="20,0,0,0" />
+                            </RelativePanel>
+                        </StackPanel>
+                    </Button>
+                    <Button x:ConnectionId='5' Name="MatchButton2" 
+                                                        
+                            Height="70" 
+                            Width="400" 
+                            Opacity="100" 
+                            Background="LawnGreen"
+                            Margin="0,0,0,5">
+                        <StackPanel>
+                            <TextBlock x:ConnectionId='29' Name="MatchDate2" FontSize="12" HorizontalAlignment="Center" />
+                            <TextBlock x:ConnectionId='30' Name="MatchId2" Visibility="Collapsed" />
+                            <RelativePanel x:ConnectionId='31' Name="Team2relative" HorizontalAlignment="Center" >
+                                <TextBlock x:ConnectionId='35' Name="HeaderHometeam2" RelativePanel.LeftOf="HeaderSlash2" FontWeight="Bold" />
+                                <TextBlock x:ConnectionId='36' Name="HeaderSlash2" Text=" - " RelativePanel.AlignHorizontalCenterWithPanel="True" />
+                                <TextBlock x:ConnectionId='37' Name="HeaderAwayteam2" RelativePanel.RightOf="HeaderSlash2" Margin="5,0,0,0" FontWeight="Bold" />
+                            </RelativePanel>
+                            <RelativePanel HorizontalAlignment="Center">
+                                <TextBlock x:ConnectionId='32' Name="HeaderHomeGoals2" RelativePanel.LeftOf="HeaderSlashGoals2" />
+                                <TextBlock x:ConnectionId='33' Name="HeaderSlashGoals2" Text=" - " RelativePanel.AlignHorizontalCenterWithPanel="True" />
+                                <TextBlock x:ConnectionId='34' Name="HeaderAwayteamGoals2" RelativePanel.RightOf="HeaderSlashGoals2" TextAlignment="Left" Margin="20,0,0,0" />
+                            </RelativePanel>
+                        </StackPanel>
+                    </Button>
+                    <Button x:ConnectionId='6' Name="MatchButton3" 
+                                                        
+                            Height="70" 
+                            Width="400" 
+                            Opacity="100" 
+                            Background="LawnGreen"
+                            Margin="0,0,0,5">
+                        <StackPanel>
+                            <TextBlock x:ConnectionId='20' Name="MatchDate3" FontSize="12" HorizontalAlignment="Center" />
+                            <TextBlock x:ConnectionId='21' Name="MatchId3" Visibility="Collapsed" />
+                            <RelativePanel x:ConnectionId='22' Name="Team3relative" HorizontalAlignment="Center" >
+                                <TextBlock x:ConnectionId='26' Name="HeaderHometeam3" RelativePanel.LeftOf="HeaderSlash3" FontWeight="Bold" />
+                                <TextBlock x:ConnectionId='27' Name="HeaderSlash3" Text=" - " RelativePanel.AlignHorizontalCenterWithPanel="True" />
+                                <TextBlock x:ConnectionId='28' Name="HeaderAwayteam3" RelativePanel.RightOf="HeaderSlash3" Margin="5,0,0,0" FontWeight="Bold" />
+                            </RelativePanel>
+                            <RelativePanel HorizontalAlignment="Center">
+                                <TextBlock x:ConnectionId='23' Name="HeaderHomeGoals3" RelativePanel.LeftOf="HeaderSlashGoals3" />
+                                <TextBlock x:ConnectionId='24' Name="HeaderSlashGoals3" Text=" - " RelativePanel.AlignHorizontalCenterWithPanel="True" />
+                                <TextBlock x:ConnectionId='25' Name="HeaderAwayteamGoals3" RelativePanel.RightOf="HeaderSlashGoals3" TextAlignment="Left" Margin="20,0,0,0" />
+                            </RelativePanel>
+                        </StackPanel>
+                    </Button>
+                    <Button x:ConnectionId='7' Name="MatchButton4" 
+                                                        
+                            Height="70" 
+                            Width="400" 
+                            Opacity="100" 
+                            Background="LawnGreen"
+                            Margin="0,0,0,5">
+                        <StackPanel>
+                            <TextBlock x:ConnectionId='11' Name="MatchDate4" FontSize="12" HorizontalAlignment="Center" />
+                            <TextBlock x:ConnectionId='12' Name="MatchId4" Visibility="Collapsed" />
+                            <RelativePanel x:ConnectionId='13' Name="Team4relative" HorizontalAlignment="Center" >
+                                <TextBlock x:ConnectionId='17' Name="HeaderHometeam4" RelativePanel.LeftOf="HeaderSlash4" FontWeight="Bold" />
+                                <TextBlock x:ConnectionId='18' Name="HeaderSlash4" Text=" - " RelativePanel.AlignHorizontalCenterWithPanel="True" />
+                                <TextBlock x:ConnectionId='19' Name="HeaderAwayteam4" RelativePanel.RightOf="HeaderSlash4" Margin="5,0,0,0" FontWeight="Bold" />
+                            </RelativePanel>
+                            <RelativePanel HorizontalAlignment="Center">
+                                <TextBlock x:ConnectionId='14' Name="HeaderHomeGoals4" RelativePanel.LeftOf="HeaderSlashGoals4" />
+                                <TextBlock x:ConnectionId='15' Name="HeaderSlashGoals4" Text=" - " RelativePanel.AlignHorizontalCenterWithPanel="True" />
+                                <TextBlock x:ConnectionId='16' Name="HeaderAwayteamGoals4" RelativePanel.RightOf="HeaderSlashGoals4" TextAlignment="Left" Margin="20,0,0,0" />
+                            </RelativePanel>
+                        </StackPanel>
+                    </Button>
+                    <RelativePanel HorizontalAlignment="Left" Width="440">
+                        <Button x:ConnectionId='9' Name="PreviousMatches" 
+                                                                
+                                Height="50" 
+                                Width="195" 
+                                Opacity="100" 
+                                Background="LawnGreen"
+                                Margin="0,0,10,0" 
+                                Content="Taaksepäin"
+                                ToolTipService.ToolTip="Selataan otteluita taaksepäin.">
+                        </Button>
+                        <Button x:ConnectionId='10' Name="NextMatches" 
+                                                               
+                                Height="50" 
+                                Width="195" 
+                                Opacity="50" 
+                                Background="LawnGreen"
+                                Margin="0,0,0,0" 
+                                Content="Eteenpäin" 
+                                RelativePanel.RightOf="PreviousMatches"
+                                ToolTipService.ToolTip="Selataan otteluita eteenpäin.">
+                        </Button>
+                    </RelativePanel>
+                    <TextBlock x:ConnectionId='8' Name="InfoText" Height="40" FontSize="14" />
+                </StackPanel>
+            </Frame>
+        </StackPanel>
+    </StackPanel>
+</Page>
+

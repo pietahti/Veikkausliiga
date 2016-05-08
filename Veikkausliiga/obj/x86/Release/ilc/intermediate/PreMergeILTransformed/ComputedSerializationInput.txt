@@ -1,0 +1,2 @@
+"/t:Veikkausliiga.OpenMatchInfoProxy+RootObject,Veikkausliiga,json"
+"/t:System.Collections.Generic.List`1[[Veikkausliiga.OpenMatchProxy+RootObject,Veikkausliiga]],mscorlib,json"

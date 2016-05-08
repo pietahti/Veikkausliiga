@@ -1,0 +1,73 @@
+﻿<Page
+    x:Class="Veikkausliiga.MatchInformationPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Veikkausliiga"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Frame Name="MatchFrame" MinHeight="600">
+        <StackPanel Background="Azure">
+
+            <TextBlock Text="Veikkausliiga" 
+                       Height="50" 
+                       FontSize="32" 
+                       Margin="40,20,0,0" 
+                       Foreground="Blue" />
+            
+            <StackPanel Name="MatchHeader" Margin="40,0,0,40" >
+                <TextBlock Name="MatchTeams" FontSize="24" />
+                <TextBlock Name="MatchDate" FontSize="24" />
+            </StackPanel>
+            
+            <StackPanel MinWidth="400" HorizontalAlignment="Center" >
+
+                <RelativePanel MinWidth="300" >
+                    <Image Name="HomeLogo" Width="60" Height="60" />
+                    <StackPanel Name="HomeTeamDetails" 
+                                RelativePanel.RightOf="HomeLogo" 
+                                Margin="20,0,0,20" 
+                                MinWidth="200">
+                        <TextBlock Text="Kotijoukkue" FontSize="12" />
+                        <TextBlock Name="HomeTeam" FontSize="24" />
+                        <TextBlock Name="HomeFullName" FontSize="24" />
+                    </StackPanel>
+                    <TextBlock Text="Maalit" 
+                               FontSize="12" 
+                               RelativePanel.RightOf="HomeTeamDetails"
+                               />
+                    <TextBlock Name="HomeGoals" 
+                               FontSize="24"
+                               RelativePanel.RightOf="HomeTeamDetails" 
+                               Margin="0,20,0,0"/>
+                </RelativePanel>
+                <RelativePanel MinWidth="300" >
+                    <Image Name="AwayLogo" Width="60" Height="60" />
+                    <StackPanel Name="AwayTeamDetails" 
+                                RelativePanel.RightOf="AwayLogo" 
+                                Margin="20,0,0,0" 
+                                MinWidth="200">
+                        <TextBlock Text="Vierasjoukkue" FontSize="12" />
+                        <TextBlock Name="AwayTeam" FontSize="24"/>
+                        <TextBlock Name="AwayFullName" FontSize="24" />
+                    </StackPanel>
+                    <TextBlock Text="Maalit" 
+                               FontSize="12" 
+                               RelativePanel.RightOf="AwayTeamDetails"
+                               />
+                    <TextBlock Name="AwayGoals" RelativePanel.RightOf="AwayTeamDetails" FontSize="24"
+                               Margin="0,20,0,0"/>
+                </RelativePanel>
+            </StackPanel>
+            <Button x:Name="button" Content="Takaisin otteluselaukseen" 
+                        HorizontalAlignment="Left" 
+                        Margin="40,60,0,50" 
+                        VerticalAlignment="Bottom"
+                        Height="60"
+                        Width="400"
+                        Tapped="OpenMainPage"
+                        Background="LawnGreen" FontSize="24"/>
+        </StackPanel>
+    </Frame>
+</Page>

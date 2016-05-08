@@ -1,0 +1,1 @@
+C:\Adafy\Apps\Veikkausliiga\Veikkausliiga\Veikkausliiga.csproj;x86
